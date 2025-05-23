@@ -8,6 +8,7 @@ import Home from './Pages/Home/Home'
 import Contact from './Pages/Contact/Contact'
 import ProductDetail from './Pages/ProductDetail/ProductDetail'
 import Login from './Pages/Login/Login'
+import CreateProduct from './Pages/CreateProduct/CreateProduct'
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
 
           {/* <Route path='/ProductDetail' element={<ProductDetail/>}/> */}
+          <Route path='/crearproducto' element={<CreateProduct/>}/>
 
         </Routes>
 
@@ -37,4 +39,3 @@ function App() {
 }
 
 export default App
-

@@ -27,13 +27,13 @@ const BotonComprar = () => {
     let content;
 
     if (estado_boton === estados_disponibles.no_comprado) {
-        content = <button onClick={comprar}><FaDollarSign className='icon'/><span className="btn-text">Comprar</span></button>;
+        content = <button onClick={comprar} className='btn-compra button btn-green'><FaDollarSign  className='icon'/><span className="btn-text">Comprar</span></button>;
 
     } else if (estado_boton === estados_disponibles.cargando){
-        content = <button disabled>Cargando</button>;
+        content = <button disabled className='btn-compra button btn-green'>Cargando</button>;
 
     } else {
-        content = <button disabled>Comprado</button>;
+        content = <button disabled className='btn-compra button btn-green'>Comprado</button>;
         
         Swal.fire({
             title: "Tu compra fue realizada!",
@@ -46,7 +46,7 @@ const BotonComprar = () => {
 
     return (
         <>
-            {content}
+            {content }
         </>
     )
 }

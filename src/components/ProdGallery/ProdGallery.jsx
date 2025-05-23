@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts } from '../../services/prodservices';
 import "./ProdGallery.css";
-import Productos2 from '../Productos/Productos';
+import Productos from '../Productos/Productos';
 
 
 
@@ -42,7 +42,7 @@ export const ProdGallery = () => {
     const componentes = productos.map(
         (product) => {
     
-            return <Productos2
+            return <Productos
                 {...product}
                 key={product.id}
                 
@@ -68,18 +68,14 @@ export const ProdGallery = () => {
         <>
             
                 <div id='content'>
-                    {/* <section className="product-gallery">
-                
-                        <h2>Nuestros Productos</h2>
-
-                        
-                    </section> */}
+                    
 
                     <div className="product-gallery__container">
                     
                         {content}
                     </div>
                 </div>
+
         </>
         
     )

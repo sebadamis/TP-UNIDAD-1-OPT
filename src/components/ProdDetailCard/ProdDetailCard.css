@@ -11,7 +11,7 @@
     --ghost-white: hsl(230, 60%, 98%);
     --sea-green: hsl(146, 75%, 30%);
     --honeydew: hsl(146, 74%, 94%);
-    --white: hsl(0, 0%, 100%);
+    /* --white: hsl(0, 0%, 100%); */
     --black: hsl(0, 0%, 0%);
 
     /**
@@ -113,7 +113,7 @@ body {
     font-size: 1.6rem;
     margin: 40px auto;
     padding: 20px;
-    background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 47%,#a849a3 100%);
+    /* background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 47%,#a849a3 100%); */
 }
 
 /*-----------------------------------*\

@@ -27,6 +27,9 @@ function NavBar() {
                     <li>
                     <NavLink to={"/registration"}>Register</NavLink>
                     </li>
+                    <li>
+                    <NavLink to={"/crearproducto"}>Crear Producto</NavLink>
+                    </li>
                 </ul>
                 <label htmlFor="nav-toggle" className="icon-burger">
                     <div className="line" />

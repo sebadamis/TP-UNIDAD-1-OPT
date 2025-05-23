@@ -1,6 +1,9 @@
 button {
     display: block;
 }
+.btn-detail {
+    background-color: var(--shamrock-green) !important;
+}
 .btn-group {
     display: flex;
     flex-direction: row;

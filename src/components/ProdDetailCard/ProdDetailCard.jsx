@@ -3,7 +3,12 @@ import "./ProdDetailCard.css";
 import BotonesDetail from '../BotonesDetail/BotonesDetail';
 
 
-    const ProdDetailCard2 = ({id, titulo, descripcion, img, descuento, stock, categoria, precioAntes, precioFinal}) => {
+    const ProdDetailCard = ({id, titulo, descripcion, img, descuento, stock, categoria, precio}) => {
+    
+    const precioConDescuentoSinRedondear = precio - (descuento * precio) / 100;
+    const precioConDescuentoRedondeado = Math.round((precioConDescuentoSinRedondear * 100) / 100);
+    
+    
 
     return (
         <>
@@ -17,7 +22,7 @@ import BotonesDetail from '../BotonesDetail/BotonesDetail';
                                     alt={id}/>
                             </div>
                             <div className="product-content">
-                                <p class="product-subtitle">{categoria}</p>
+                                <p className="product-subtitle">{categoria}</p>
                                 <h1 className="h1 product-title">
                                     {titulo}
                                 </h1>
@@ -28,9 +33,9 @@ import BotonesDetail from '../BotonesDetail/BotonesDetail';
                                     {descripcion}
                                 </p>
                                 <div className="wrapper">
-                                    <span className="price" data-total-price="">${precioFinal}</span>
+                                    <span className="price" data-total-price="">${precioConDescuentoRedondeado}</span>
                                     <span className="badge">{descuento}%</span>
-                                    <del className="del">${precioAntes}</del>
+                                    <del className="del">${precio}</del>
                                 </div>
                             
                                 <BotonesDetail/>
@@ -45,4 +50,4 @@ import BotonesDetail from '../BotonesDetail/BotonesDetail';
 }
 
 
-export default ProdDetailCard2
+export default ProdDetailCard

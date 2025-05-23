@@ -3,10 +3,15 @@ import "./Productos.css"
 import BotonComprar from '../BotonCompra/BotonCompra'
 import { NavLink } from 'react-router'
 
-export const Productos2 = ({id, titulo, img, precioAntes, precioFinal, descuento}) => {
+export const Productos = ({id, titulo, img,  precio, descuento}) => {
+
+    const precioConDescuentoSinRedondear = precio - (descuento * precio) / 100;
+    const precioConDescuentoRedondeado = Math.round((precioConDescuentoSinRedondear * 100) / 100);
+    
+
     return (
     <>
-        <body className='body-card'>
+        <main className='main-product-card'>
             <div className="card-container">
                 <div className="card">
                     <div className="imgBox">
@@ -20,19 +25,20 @@ export const Productos2 = ({id, titulo, img, precioAntes, precioFinal, descuento
                     <div className="contentBox">
                         <h3>{titulo}</h3>
                         <h2 className="price">
-                        <span className='preciof'>${precioFinal}</span><span className='precioa'>${precioAntes}</span>
+                        <span className='preciof'>${precioConDescuentoRedondeado}</span>
+                        <span className='precioa'>${precio}</span>
                         </h2>
                         <div className="botones-card">
-                            <button className="button"><BotonComprar type="button" >COMPRAR</BotonComprar></button>
+                            <BotonComprar type="button">COMPRAR</BotonComprar>
                             <button className="button"><NavLink to={`/products/${id}`}>Ver detalle</NavLink></button>
                         </div>
                     </div>
                 </div>
             </div>
-        </body>
+        </main>
     </>
 
     )
 }
 
-export default Productos2
+export default Productos

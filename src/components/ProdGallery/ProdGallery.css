@@ -4,12 +4,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent;
+    background-color: none;
     flex-wrap: wrap;
 }
 
 .loadin-msg {
     background-color: white;
+    background-color: none;
     color: black;
     height: 40%;
     width: auto;
@@ -26,5 +27,6 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background-color: none;
 }
 

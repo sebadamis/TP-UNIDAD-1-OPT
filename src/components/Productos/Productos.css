@@ -2,19 +2,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 html{
     max-height: 100vh;
     max-width: 100vw;
+    background: linear-gradient(90deg, #5b193c, #6a074c, #b01193, #9c1a97, #7f0095, #6e0f9d, #54169a, #231cb0);
 }
-.body-card {
+.main-product-card {
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
     display: flex;
 	flex-direction: row;
-    background: linear-gradient(90deg, #5b193c, #6a074c, #b01193, #9c1a97, #7f0095, #6e0f9d, #54169a, #231cb0);
+    
     
     .card-container {
         height: 100%;
